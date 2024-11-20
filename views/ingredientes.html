@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredientes</title>
+</head>
+<body>
+    <div class="container mt-3">
+        <h1>Ingredientes</h1>
+        <a class="btn btn-secondary" href="/"> Inicio</a>
+        <table class="table table-striped table-hover mt-2">
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Calorias</th>
+                <th>Precio</th>
+                <th>Inventario</th>
+                <th>Vegetariano</th>
+                <th>Tipo</th>
+                <th>Sabor</th>
+            </tr>
+        {% for ingrediente in ingredientes %}
+            <tr>
+                <td>{{ ingrediente.id }}</td>
+                <td>{{ ingrediente.nombre }}</td>
+                <td>{{ ingrediente.calorias }}</td>
+                <td>{{ ingrediente.precio}}</td>
+                <td>{{ ingrediente.inventario}}</td>
+                <td>{{ ingrediente.vegetariano }}</td>
+                <td>{{ ingrediente.tipo }}</td>
+                <td>{{ ingrediente.sabor }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
